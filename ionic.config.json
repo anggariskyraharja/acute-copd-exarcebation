@@ -1,0 +1,8 @@
+{
+  "name": "acute-copd-exacerbation",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "c25d8778"
+}
