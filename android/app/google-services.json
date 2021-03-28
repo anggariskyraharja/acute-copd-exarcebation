@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "745703513099",
+    "project_id": "respiratory-copd-exarcebation",
+    "storage_bucket": "respiratory-copd-exarcebation.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:745703513099:android:dafddb5339e8f17cfefb0e",
+        "android_client_info": {
+          "package_name": "com.imedicalapps.bap65scoreforcopd"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "745703513099-3fmeb7l9ck5r78a9e4lmb66pdf1f2e3l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUK2hujCUeH6ZdOOGnzAkPPCfAsyJFnY4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "745703513099-3fmeb7l9ck5r78a9e4lmb66pdf1f2e3l.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "745703513099-t3aijcnvfh2pjj7vaac6jc9qi60pc6ge.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.imedicalapps.bap65scoreforcopd"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Respiratory COPD Exacerbation</string>
+    <string name="title_activity_main">Respiratory COPD Exacerbation</string>
+    <string name="package_name">com.imedicalapps.bap65scoreforcopd</string>
+    <string name="custom_url_scheme">com.imedicalapps.bap65scoreforcopd</string>
+</resources>

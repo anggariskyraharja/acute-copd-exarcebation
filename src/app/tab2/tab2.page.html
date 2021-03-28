@@ -1,17 +1,100 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar class="ion-text-center">
     <ion-title>
-      Tab 2
+      DECAF Score
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-item class="color11">
+    <ion-text>
+      <p>DECAF score predicts in-hospital mortality in acute COPD exacerbation.</p>
+    </ion-text>
+  </ion-item>
+  <ion-card class="color1">
+    <ion-card-content>
+      <ion-item class="color2">
+        <ion-text>Extended MRC Dyspnea Scale:</ion-text>
+      </ion-item>
+      <ion-item class="color11a">
+        <ion-select value="1" (ionChange)="checkq1($event)">
+          <ion-select-option value="1">Not too dyspneic to leave house.</ion-select-option>
+          <ion-select-option value="2">Too dyspneic to leave house but independent with washing or dressing.</ion-select-option>
+          <ion-select-option value="3">Too dyspneic to leave house and wash or dress.</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <p><i>On a good day, within the last 3 months</i></p>
+      <ion-item-divider class="color1"></ion-item-divider>
+      <ion-item class="color2">
+        <ion-radio-group (ionChange)="checkq2($event)">
+            <ion-text>Eosinopenia</ion-text>
+          <ion-item class="color2">
+            <ion-text>Yes</ion-text>
+            <ion-radio slot="start" value="q11" ></ion-radio>
+          </ion-item>
+          <ion-item class="color2">
+            <ion-text>No</ion-text>
+            <ion-radio slot="start" value="q12"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-item>
+      <p><i>Eosinophils <0.05×10⁹/L</i></p>
+      <ion-item-divider class="color1"></ion-item-divider>
+      <ion-item class="color2">
+        <ion-radio-group (ionChange)="checkq3($event)">
+            <ion-text>Consolidation on chest x-ray</ion-text>
+          <ion-item class="color2">
+            <ion-text>Yes</ion-text>
+            <ion-radio slot="start" value="q11" ></ion-radio>
+          </ion-item>
+          <ion-item class="color2">
+            <ion-text>No</ion-text>
+            <ion-radio slot="start" value="q12"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-item>
+      <ion-item-divider class="color1"></ion-item-divider>
+      <ion-item class="color2">
+        <ion-radio-group (ionChange)="checkq4($event)">
+            <ion-text>Acidemia</ion-text>
+          <ion-item class="color2">
+            <ion-text>Yes</ion-text>
+            <ion-radio slot="start" value="q11" ></ion-radio>
+          </ion-item>
+          <ion-item class="color2">
+            <ion-text>No</ion-text>
+            <ion-radio slot="start" value="q12"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-item>
+      <p><i>pH <7.30</i></p>
+      <ion-item-divider class="color1"></ion-item-divider>
+      <ion-item class="color2">
+        <ion-radio-group (ionChange)="checkq5($event)">
+            <ion-text>Atrial fibrillation</ion-text>
+          <ion-item class="color2">
+            <ion-text>Yes</ion-text>
+            <ion-radio slot="start" value="q11" ></ion-radio>
+          </ion-item>
+          <ion-item class="color2">
+            <ion-text>No</ion-text>
+            <ion-radio slot="start" value="q12"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-item>
+      <p><i>On EKG at presentation and/or history of paroxysmal afib</i></p>
+      </ion-card-content>
+</ion-card>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+<ion-card class="color111">
+<div>
+  <p><u><b>The DECAF Score Result:</b></u></p>
+  <p><b>{{classification1}}</b></p>
+  <p *ngIf="classification1">{{classification2}}</p>
+  <p *ngIf="classification1">{{classification3}}</p>
+  <p *ngIf="classification1"><i>{{classification4}}</i></p>
+  <p><a target="_blank" rel="noopener noreferrer" href="https://pubmed.ncbi.nlm.nih.gov/22895999/">Click here for the reference!</a></p>
+</div>
+</ion-card>
 </ion-content>

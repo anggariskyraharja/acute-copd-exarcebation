@@ -1,17 +1,87 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar class="ion-text-center">
     <ion-title>
-      Tab 1
+      BAP-65 Score
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-item class="color11">
+    <ion-text>
+      <p>BAP-65 score predicts mortality in acute COPD exacerbation.</p>
+    </ion-text>
+  </ion-item>
+  <ion-card class="color1">
+    <ion-card-content>
+      <ion-item class="color2">
+        <ion-radio-group (ionChange)="checkq1($event)">
+            <ion-text>BUN ≥25 mg/dL (8.9 mmol/L)</ion-text>
+          <ion-item class="color2">
+            <ion-text>Yes</ion-text>
+            <ion-radio slot="start" value="q11" ></ion-radio>
+          </ion-item>
+          <ion-item class="color2">
+            <ion-text>No</ion-text>
+            <ion-radio slot="start" value="q12"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-item>
+      <ion-item-divider class="color1"></ion-item-divider>
+      <ion-item class="color2">
+        <ion-radio-group (ionChange)="checkq2($event)">
+            <ion-text>Altered mental status</ion-text>
+          <ion-item class="color2">
+            <ion-text>Yes</ion-text>
+            <ion-radio slot="start" value="q11" ></ion-radio>
+          </ion-item>
+          <ion-item class="color2">
+            <ion-text>No</ion-text>
+            <ion-radio slot="start" value="q12"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-item>
+      <p><i>Initial GCS <14, or disorientation, stupor, or coma as determined by physician</i></p>
+      <ion-item-divider class="color1"></ion-item-divider>
+      <ion-item class="color2">
+        <ion-radio-group (ionChange)="checkq3($event)">
+            <ion-text>Pulse ≥109 beats/min</ion-text>
+          <ion-item class="color2">
+            <ion-text>Yes</ion-text>
+            <ion-radio slot="start" value="q11" ></ion-radio>
+          </ion-item>
+          <ion-item class="color2">
+            <ion-text>No</ion-text>
+            <ion-radio slot="start" value="q12"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-item>
+      <ion-item-divider class="color1"></ion-item-divider>
+      <ion-item class="color2">
+        <ion-radio-group (ionChange)="checkq4($event)">
+            <ion-text>Age, years</ion-text>
+          <ion-item class="color2">
+            <ion-text>41-64</ion-text>
+            <ion-radio slot="start" value="q11" ></ion-radio>
+          </ion-item>
+          <ion-item class="color2">
+            <ion-text>≥65</ion-text>
+            <ion-radio slot="start" value="q12"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-item>
+      <p><i>BAP-65 is not validated in patients ≤40 years old.</i></p>
+      </ion-card-content>
+</ion-card>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+<ion-card class="color111">
+<div>
+  <p><u><b>The BAP-65 Score Result:</b></u></p>
+  <p><b>{{classification1}}</b></p>
+  <p *ngIf="classification1">{{classification2}}</p>
+  <p *ngIf="classification1">{{classification3}}</p>
+  <p *ngIf="classification1"><i>{{classification4}}</i></p>
+  <p><a target="_blank" rel="noopener noreferrer" href="https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/224759">Click here for the reference!</a></p>
+</div>
+</ion-card>
 </ion-content>
